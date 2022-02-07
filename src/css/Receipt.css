@@ -1,0 +1,38 @@
+.receipt {
+  display: flex;
+
+  border: 1px solid orange;
+  text-align: center;
+  padding: 1rem;
+}
+
+.receipt-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-header {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+
+  padding: 5px 10px;
+}
+.receipt h1 {
+  font-size: 3rem;
+}
+
+.card-main {
+  display: flex; /* Children use Flexbox */
+  flex-direction: column; /* Rotate Axis to Vertical */
+  justify-content: center; /* Group Children in Center */
+  align-items: center; /* Group Children in Center (+axis) */
+  padding: 15px 0; /* Add padding to the top/bottom */
+}
+
+.magenta {
+  display: inline-block;
+  color: magenta;
+}

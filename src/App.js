@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Data from "./Data/Records";
+import { useState } from "react";
+import Receipt from "./components/Receipt";
+import records from "./Data/Records";
 
 function App() {
+  const [receipts, setReceipts] = useState(records);
+  console.log(receipts);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {records.map((current, index) => {
+        return <Receipt {...current} key={index} />;
+      })}
     </div>
   );
 }
